@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Development - Details</title>
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --secondary-text: #ababab;
+            --accent-color: #ff004f;
+            --card-bg: #262626;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'poppins', sans-serif;
+            padding: 50px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Centering and Max Width for Content */
+        .container {
+            max-width: 900px;
+            /* Limits the content width for readability */
+            margin: 0 auto;
+            /* Centers the container */
+            padding: 20px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 3em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--text-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        p,
+        ul {
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* List styling for process steps */
+        ul li {
+            list-style: disc;
+            margin-left: 20px;
+            color: var(--secondary-text);
+        }
+
+        /* --- Feature Boxes (New Stylish Element) --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            border: 1px solid transparent;
+            text-align: left;
+            /* Ensure default is set for safety */
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-color);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* --- Back Button Style --- */
+        .back-btn {
+            display: inline-block;
+            margin: 40px 0 20px;
+            padding: 10px 25px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #e60042;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------------------------------------- */
+        /* UNIVERSAL MOBILE ADJUSTMENTS (FINAL FIXES) */
+        /* ---------------------------------------------------- */
+        @media (max-width: 600px) {
+
+            /* 1. Base Padding/Margins */
+            .container {
+                padding: 10px 5%;
+                /* Use percentage for horizontal padding */
+            }
+
+            body {
+                padding: 20px 0;
+            }
+
+            /* 2. Typography Adjustments */
+            h1 {
+                font-size: 2.2em;
+                /* Ensure the main title is smaller */
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+                /* Ensure subheadings are smaller */
+                margin-top: 30px;
+                /* Slightly less vertical space above sections */
+            }
+
+            p,
+            ul li,
+            .tab-contents ul li {
+                font-size: 0.9em;
+                /* Make body text slightly smaller for readability */
+            }
+
+            /* 3. Button/Link Spacing */
+            .back-btn {
+                margin: 20px 0 10px;
+                /* Adjust button margin */
+            }
+
+            /* 4. Detail Page Grid Fix (to stack vertically) */
+            .feature-grid,
+            .tools-grid,
+            .tech-grid,
+            .focus-grid,
+            .stack-grid {
+                grid-template-columns: 1fr;
+                /* Forces stacking */
+                gap: 15px;
+            }
+
+            /* FIX: Card Content Styling when Stacked */
+            .stack-card,
+            .tech-card,
+            .focus-card,
+            .tool-card,
+            .feature-card {
+                text-align: left !important;
+                /* Forces left alignment, overriding any desktop center alignment */
+                padding: 20px;
+                /* Slightly reduce card padding */
+            }
+
+            /* FIX: Specific Card Typography */
+            .stack-card h3,
+            .tech-card h3,
+            .focus-card h3,
+            .tool-card h3,
+            .feature-card h3 {
+                font-size: 1.1em;
+                margin-bottom: 5px;
+            }
+
+            .stack-card p,
+            .tech-card p,
+            .focus-card p,
+            .tool-card p,
+            .feature-card p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+

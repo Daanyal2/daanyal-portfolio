@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design & 3D Visualization | Muhammad Daanyal</title>
+    <meta name="description"
+        content="Explore high-end graphic design, brand kits, and 3D architectural visualizations created by Muhammad Daanyal using Blender and Illustrator.">
+    <meta name="keywords"
+        content="Graphic Design, 3D Visualization, Blender, Architectural Design, Muhammad Daanyal, Portfolio">
+    <meta name="author" content="Muhammad Daanyal">
+    <!-- 3D Model Viewer Library -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --secondary-text: #ababab;
+            --accent-color: #ff004f;
+            --card-bg: #262626;
+        }
+
+        /* Essential for 3D Model Viewer */
+        model-viewer {
+            width: 100%;
+            height: 400px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            --poster-color: transparent;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Centering and Max Width for Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 3em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p,
+        ul {
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* --- Back Button Style --- */
+        .back-btn {
+            display: inline-block;
+            margin: 10px 0 30px;
+            padding: 10px 25px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 0, 79, 0.4);
+            /* Soft shadow for lift */
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: #e60042;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 0, 79, 0.6);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(255, 0, 79, 0.3);
+        }
+
+        /* --- Media Placeholders --- */
+        .media-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .media-section h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .media-placeholder {
+            border-radius: 8px;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1em;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ensures actual media takes up the full space when inserted */
+        .media-placeholder img,
+        .media-placeholder video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* --- Developer Photo Placeholder --- */
+        .dev-photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Circular image */
+            margin: 20px auto 10px;
+            border: 4px solid var(--accent-color);
+            background-color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: var(--text-color);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .dev-photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .back-btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            model-viewer {
+                height: 300px;
+            }
+
+            .media-placeholder {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- BACK BUTTON: Uses JavaScript to navigate back to the previous page in history -->
+        <button class="back-btn" onclick="history.back()">← Back to Projects</button>
+
+        <!-- MAIN PAGE CONTENT -->
+        <h1 style="margin-top: 10px;">Graphic Designing Projects</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">
+            High-impact visual identities, custom illustrations, and 3D product visualizations that bring brands to
+            life.
+        </p>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 1. MAIN VISUAL / MOCKUP -->
+        <!-- ------------------------------------------------------------------ -->
+        <div class="media-section">
+            <h2>Brand Identity: Dat Tech</h2>
+            <div class="media-placeholder"
+                style="min-height: 400px; background: url('images/Futuristic _Dat Tech_ logo design.png') center/cover no-repeat; border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <!-- Futuristic Logo Design for Dat Tech -->
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 2. PROJECT DETAILS SECTION -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2>Design Brief & Concept</h2>
+        <p>
+            Developed a futuristic brand identity for **Dat Tech**, focusing on minimalist innovation, clean vector
+            lines,
+            and a professional tech-driven aesthetic. The design represents speed, reliability, and high-tech corporate
+            excellence.
+        </p>
+        <p>
+            Project Scope:
+            - Vector Logo Design (Scalable for Web/Print).
+            - Custom Icon Set for software interface.
+            - Brand Guidelines (Usage, Color Story, Typography).
+        </p>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 3. PROCESS VIDEO / ALTERNATE VISUALS -->
+        <!-- ------------------------------------------------------------------ -->
+        <div class="media-section">
+            <h2>3D Project: Modern Residential House</h2>
+            <div class="media-placeholder" style="min-height: 500px;">
+                <model-viewer src="images/my.glb" alt="A 3D model of a modern house" auto-rotate camera-controls
+                    shadow-intensity="1" environment-image="neutral" exposure="1.0" loading="lazy"
+                    poster="images/BackImage.png">
+                </model-viewer>
+                <p style="color: var(--secondary-text); margin-top: 15px; font-size: 0.9em; padding: 0 20px;">
+                    Interactive 3D Architectural Model — Visualizing modern residential design with realistic textures
+                    and environmental lighting.
+                </p>
+            </div>
+        </div>
+
+        <div class="media-section">
+            <h2>3D Showcase: Product Visualization</h2>
+            <div class="media-placeholder">
+                <model-viewer src="images/tent.gltf" alt="A 3D model of a tent" auto-rotate camera-controls
+                    shadow-intensity="1" environment-image="neutral" exposure="1.2">
+                </model-viewer>
+                <p style="color: var(--secondary-text); margin-top: 15px; font-size: 0.9em; padding: 0 20px;">
+                    Interactive 3D model of a Tent — Created in Blender with focus on fabric physics and lighting.
+                </p>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 4. TECHNICAL STACK / DELIVERABLES -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2>Tools and Deliverables</h2>
+        <p>
+            Utilizing industry-standard tools to deliver high-quality, professional assets.
+        </p>
+        <ul>
+            <li>Software Used: Adobe Illustrator, Adobe Photoshop, Blender (3D)</li>
+            <li>Design Focus: Vector illustration, Brand Identity, 3D Mockups</li>
+            <li>Deliverables: SVG/PDF (Print-ready), PNG/JPG/WebP (Optimized)</li>
+        </ul>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 5. AUTHOR PHOTO (Customized) -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2 style="text-align: center;">Designed By</h2>
+        <div class="dev-photo-placeholder">
+            <img src="images/IMG_1344.JPG" alt="Developer Profile Photo">
+        </div>
+        <p style="text-align: center; font-size: 1.2em; color: var(--text-color);">Muhammad Daanyal</p>
+
+        <div style="height: 50px;"></div> <!-- Spacer -->
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+/*------------------portfolio----------------*/
+
+#portfolio {
+    padding: 100px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.work-title {
+    font-size: 1.4em;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif !important;
+}
+
+.work {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+    opacity: 0.8;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 0, 81, 0.8));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.layer p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.layer a.click-hint {
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: #ff004f;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.4);
+    transition: transform 0.3s, background 0.3s;
+    line-height: normal;
+    width: auto;
+    height: auto;
+}
+
+.layer a.click-hint:hover {
+    transform: scale(1.05);
+    background: #e60042;
+    box-shadow: 0 8px 20px rgba(255, 0, 79, 0.6);
+}
+
+.work:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.work:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 0, 81, 0.2);
+}
+
+.btn {
+    display: block;
+    margin: 60px auto;
+    width: fit-content;
+    border: 2px solid #ff004f;
+    padding: 15px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.5s;
+    background: transparent;
+}
+
+.btn:hover {
+    background: #ff004f;
+    box-shadow: 0 10px 25px rgba(255, 0, 81, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Portfolio Responsive Tweaks */
+@media only screen and (max-width: 600px) {
+    #portfolio {
+        padding: 60px 0;
+    }
+
+    .work-list {
+        grid-gap: 30px;
+    }
+
+    .sub-title {
+        font-size: 40px !important;
+        text-align: center;
+    }
+
+    .layer {
+        padding: 0 20px;
+    }
+
+    .layer h3 {
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 13px;
+    }
+}

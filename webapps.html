@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websites Development - Details</title>
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --secondary-text: #ababab;
+            --accent-color: #ff004f;
+            --card-bg: #262626;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'poppins', sans-serif;
+            padding: 50px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Centering and Max Width for Content */
+        .container {
+            max-width: 900px;
+            /* Limits the content width for readability */
+            margin: 0 auto;
+            /* Centers the container */
+            padding: 20px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 3em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--text-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        p,
+        ul {
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* List styling for process steps */
+        ul li {
+            list-style: disc;
+            margin-left: 20px;
+            color: var(--secondary-text);
+        }
+
+        /* --- Technology Grid --- */
+        .tech-grid {
+            display: grid;
+            /* FIX: Changed to 2 fixed columns for a 2x2 layout on desktop */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tech-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            /* Desktop alignment is center */
+            border: 1px solid transparent;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .tech-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .tech-card h3 {
+            color: var(--accent-color);
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        /* --- Back Button Style --- */
+        .back-btn {
+            display: inline-block;
+            margin: 40px 0 20px;
+            padding: 10px 25px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #e60042;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------------------------------------- */
+        /* UNIVERSAL MOBILE ADJUSTMENTS (FINAL FIXES) */
+        /* ---------------------------------------------------- */
+        @media (max-width: 600px) {
+
+            /* 1. Base Padding/Margins */
+            .container {
+                padding: 10px 5%;
+                /* Use percentage for horizontal padding */
+            }
+
+            body {
+                padding: 20px 0;
+            }
+
+            /* 2. Typography Adjustments */
+            h1 {
+                font-size: 2.2em;
+                /* Ensure the main title is smaller */
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+                /* Ensure subheadings are smaller */
+                margin-top: 30px;
+                /* Slightly less vertical space above sections */
+            }
+
+            p,
+            ul li,
+            .tab-contents ul li {
+                font-size: 0.9em;
+                /* Make body text slightly smaller for readability */
+            }
+
+            /* 3. Button/Link Spacing */
+            .back-btn {
+                margin: 20px 0 10px;
+                /* Adjust button margin */
+            }
+
+            /* 4. Detail Page Grid Fix (to stack vertically) */
+            /* NOTE: For mobile, we still want 1 column (vertical stacking) */
+            .feature-grid,
+            .tools-grid,
+            .tech-grid,
+            .focus-grid,
+            .stack-grid {
+                grid-template-columns: 1fr;
+                /* Forces stacking (1 column) on mobile */
+                gap: 15px;
+            }
+
+            /* FIX: Card Content Styling when Stacked */
+            .stack-card,
+            .tech-card,
+            .focus-card,
+            .tool-card,
+            .feature-card {
+                text-align: left !important;
+                /* Forces left alignment, overriding desktop 'center' */
+                padding: 20px;
+                /* Slightly reduce card padding */
+            }
+
+            /* FIX: Specific Card Typography */
+            .stack-card h3,
+            .tech-card h3,
+            .focus-card h3,
+            .tool-card h3,
+            .feature-card h3 {
+                font-size: 1.1em;
+                margin-bottom: 5px;
+            }
+
+            /* SPECIFIC FIX FOR THE OVERFLOWING TECH STACK HEADING */
+            .tech-card h3 {
+                font-size: 1em !important;
+            }
+
+            .stack-card p,
+            .tech-card p,
+            .focus-card p,
+            .tool-card p,
+            .feature-card p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <button class="back-btn" onclick="history.back()">← Back to Services</button>
+
+        <h1>Website Development</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">
+            Creating modern, fast, and fully responsive websites, from striking portfolios to robust business solutions.
+        </p>
+
+        <h2>What I Deliver</h2>
+        <p>
+            My websites are built on the foundations of **speed, responsiveness, and clean code**, ensuring a
+            professional and future-proof online presence.
+        </p>
+        <ul>
+            <li>Fully Responsive Design: Perfect display and usability across all devices (mobile, tablet, desktop).
+            </li>
+            <li>Performance Optimization: Websites are built to load fast, improving user experience and SEO.</li>
+            <li>Search Engine Friendly (SEO): Clean HTML structure and semantic markup for better search visibility.
+            </li>
+            <li>Modern UI/UX Implementation: Translating design concepts into smooth, functional web interfaces.
+            </li>
+        </ul>
+
+        <h2>Core Technology Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h3>HTML5</h3>
+                <p>Semantic structure and accessibility.</p>
+            </div>
+            <div class="tech-card">
+                <h3>CSS3 / SCSS</h3>
+                <p>Advanced layouts, animations, and custom styling.</p>
+            </div>
+            <div class="tech-card">
+                <h3>JavaScript (JS)</h3>
+                <p>Dynamic functionality and interactive elements.</p>
+            </div>
+            <div class="tech-card">
+                <h3>Responsiveness</h3>
+                <p>Mobile-first approach using Media Queries.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 50px;">From Concept to Launch</h2>
+        <p>
+            I handle the entire frontend development cycle, ensuring that the final product is not just visually
+            appealing but also a powerful, reliable tool for your brand.
+        </p>
+
+    </div>
+</body>
+
+</html>
