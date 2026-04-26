@@ -245,28 +245,44 @@
         <!-- ------------------------------------------------------------------ -->
         <div class="media-section">
             <h2>3D Project: Modern Residential House</h2>
-            <div class="media-placeholder" style="min-height: 500px;">
+            <div class="media-placeholder" style="min-height: 500px; background: none;">
+                <img src="images/house.png" alt="Modern Residential House Visualization"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+                <p style="color: var(--secondary-text); margin-top: 15px; font-size: 0.9em; padding: 0 20px;">
+                    Professional 3D Architectural Visualization — Multi-perspective view of a modern residential design,
+                    featuring clean geometric lines and vibrant aesthetics.
+                </p>
+            </div>
+            <div class="media-placeholder" style="min-height: 400px; margin-top: 20px;">
                 <model-viewer src="images/my.glb" alt="A 3D model of a modern house" auto-rotate camera-controls
                     shadow-intensity="1" environment-image="neutral" exposure="1.0" loading="lazy"
-                    poster="images/BackImage.png">
+                    poster="images/house.png">
                 </model-viewer>
                 <p style="color: var(--secondary-text); margin-top: 15px; font-size: 0.9em; padding: 0 20px;">
-                    Interactive 3D Architectural Model — Visualizing modern residential design with realistic textures
-                    and environmental lighting.
+                    Interactive 3D Model — Explore the architectural details of the residential design in real-time.
                 </p>
             </div>
         </div>
 
         <div class="media-section">
-            <h2>3D Showcase: Product Visualization</h2>
-            <div class="media-placeholder">
+            <h2>3D Showcase: Product Visualization (Tent)</h2>
+            <div class="media-placeholder" style="min-height: 500px; background: #000;">
+                <!-- High-Definition 3D Viewer with Environment Map -->
                 <model-viewer src="images/tent.gltf" alt="A 3D model of a tent" auto-rotate camera-controls
-                    shadow-intensity="1" environment-image="neutral" exposure="1.2">
+                    shadow-intensity="2"
+                    environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_hdr.hdr"
+                    skybox-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_hdr.hdr"
+                    exposure="1.5" ar ar-modes="webxr scene-viewer quick-look" camera-orbit="45deg 75deg 105%"
+                    field-of-view="30deg">
                 </model-viewer>
                 <p style="color: var(--secondary-text); margin-top: 15px; font-size: 0.9em; padding: 0 20px;">
-                    Interactive 3D model of a Tent — Created in Blender with focus on fabric physics and lighting.
+                    HD 3D Product Visualization — Professional render with semi-realistic environment lighting and
+                    fabric texture details.
                 </p>
             </div>
+            <p style="text-align: center; color: var(--secondary-text); font-style: italic;">
+                Note: Environmental lighting and HRD skybox implemented for realistic outdoor aesthetic.
+            </p>
         </div>
 
         <!-- ------------------------------------------------------------------ -->
