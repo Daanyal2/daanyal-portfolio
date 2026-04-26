@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Daanyal | Professional Creative Portfolio</title>
+    <meta name="description"
+        content="Entry portal for Muhammad Daanyal's professional creative portfolio. Exploring full-stack development, mobile apps, and high-end graphic design.">
+    <meta name="keywords" content="Muhammad Daanyal, Developer, Designer, Portfolio, Full-Stack, Mobile Apps, UI/UX">
+    <meta name="author" content="Muhammad Daanyal">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daanyal-portfolio.com/">
+    <meta property="og:title" content="Muhammad Daanyal | Professional Creative Portfolio">
+    <meta property="og:description"
+        content="Explore the creative works and technical expertise of Muhammad Daanyal in Web Development, Mobile Apps, and Brand Design.">
+    <meta property="og:image" content="images/graphics.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://daanyal-portfolio.com/">
+    <meta property="twitter:title" content="Muhammad Daanyal | Professional Creative Portfolio">
+    <meta property="twitter:description"
+        content="Explore the creative works and technical expertise of Muhammad Daanyal in Web Development, Mobile Apps, and Brand Design.">
+    <meta property="twitter:image" content="images/graphics.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammad Daanyal",
+      "url": "https://daanyal-portfolio.com/",
+      "image": "images/IMG_1344.JPG",
+      "sameAs": [
+        "https://github.com/Daanyal2",
+        "https://www.linkedin.com/in/muhammad-daanyal-5bb6a1206"
+      ],
+      "jobTitle": "Full-Stack Developer & Creative Designer",
+      "description": "Designer, Developer, and Creator specializing in Full-Stack Web Apps, Mobile Development, and 3D Architectural Design."
+    }
+    </script>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent: #ff004f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            /* Matches the main portfolio background */
+            background: #080808;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: var(--text-primary);
+        }
+
+        /* App-like Container */
+        .app-container {
+            width: 100%;
+            max-width: 400px;
+            height: 90vh;
+            max-height: 800px;
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+            border-radius: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px var(--glass-border);
+            position: relative;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .app-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 450px) {
+            .app-container {
+                max-width: 95%;
+                height: 85vh;
+                border-radius: 30px;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                margin-bottom: 25px;
+            }
+
+            .avatar-ring {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Top Status Bar Mockup */
+        .status-bar {
+            height: 44px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 10;
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 24px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animated Objects Section */
+
+        .floating-obj {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.5));
+            z-index: 1;
+            will-change: transform;
+        }
+
+        .floating-obj svg {
+            width: 100%;
+            height: 100%;
+            fill: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Airplane */
+        .airplane-container {
+            top: 15%;
+            left: -100px;
+            animation: flyPathRight 12s ease-in-out infinite;
+        }
+
+        .airplane-container svg {
+            transform: rotate(45deg);
+        }
+
+        /* Laptop */
+        .laptop-container {
+            top: 40%;
+            right: -100px;
+            animation: flyPathLeft 15s ease-in-out infinite;
+            animation-delay: 2s;
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Mobile Phone */
+        .phone-container {
+            top: 60%;
+            left: -100px;
+            animation: flyPathRight 14s ease-in-out infinite;
+            animation-delay: 5s;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Settings Gear */
+        .gear-container {
+            top: 75%;
+            right: -100px;
+            animation: flyPathLeft 18s linear infinite;
+            animation-delay: 8s;
+            width: 45px;
+            height: 45px;
+        }
+
+        .gear-container svg {
+            animation: spin 6s linear infinite;
+        }
+
+        @keyframes flyPathRight {
+            0% {
+                transform: translate(0, 50px) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: translate(250px, -50px) rotate(15deg) scale(1.1);
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(500px, -150px) rotate(30deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        @keyframes flyPathLeft {
+            0% {
+                transform: translate(0, 0px) rotate(-10deg) scale(0.8);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: translate(-250px, 30px) rotate(-25deg) scale(1.1);
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-500px, 100px) rotate(-40deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Profile Elements */
+        .avatar-ring {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+            padding: 3px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            animation: pulse 3s infinite ease-in-out;
+            z-index: 5;
+            position: relative;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 79, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 0, 79, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 79, 0);
+            }
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #2a2a2a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .greeting {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Action Button */
+        .btn-enter {
+            margin-top: auto;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 80%;
+            padding: 16px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .btn-enter:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-enter:active {
+            transform: translateY(1px);
+        }
+
+        .btn-enter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-enter:hover::before {
+            left: 100%;
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main App Container -->
+    <div class="app-container" id="app">
+        <!-- Status Bar Mock -->
+        <div class="status-bar">
+            <span id="time">9:41</span>
+            <div class="icons">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Animated Objects -->
+        <!-- Airplane -->
+        <div class="floating-obj airplane-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+            </svg>
+        </div>
+
+        <!-- Laptop -->
+        <div class="floating-obj laptop-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19 18H5c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H19zM5 6v10h14V6H5z" />
+                <path d="M22 20H2v2h20v-2z" />
+                <!-- screen -->
+                <path d="M11 14h2v1h-2z" fill="#ff004f" />
+            </svg>
+        </div>
+
+        <!-- Phone -->
+        <div class="floating-obj phone-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16 1H8C6.9 1 6 1.9 6 3v18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM16 19H8V5h8v14zm-4 1.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+            </svg>
+        </div>
+
+        <!-- Gear / Tech Settings -->
+        <div class="floating-obj gear-container">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+            </svg>
+        </div>
+
+        <div class="content">
+            <!-- Profile Avatar -->
+            <div class="avatar-ring">
+                <div class="avatar">
+                    <img src="images/IMG_1344.JPG" alt="MD"
+                        onerror="this.style.display='none'; this.parentNode.innerHTML='MD'">
+                </div>
+            </div>
+
+            <div class="greeting">Welcome to the Portfolio</div>
+            <h1 class="name">Muhammad Daanyal</h1>
+            <div class="subtitle">Designer • Developer • Creator</div>
+
+            <!-- Interactive Action Button linking to portfolio.html -->
+            <a href="portfolio.html" class="btn-enter"
+                onclick="addRipple(event); setTimeout(() => window.location.href='portfolio.html', 500); return false;">
+                Explore Profile
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Set dynamic time on status bar
+        function updateTime() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('time').innerText = hours + ':' + minutes;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Add interactive ripple effect on button
+        function addRipple(e) {
+            const btn = e.currentTarget;
+            const circle = document.createElement('span');
+            const diameter = Math.max(btn.clientWidth, btn.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - btn.getBoundingClientRect().left - radius}px`;
+            circle.style.top = `${e.clientY - btn.getBoundingClientRect().top - radius}px`;
+            circle.style.position = 'absolute';
+            circle.style.borderRadius = '50%';
+            circle.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+            circle.style.transform = 'scale(0)';
+            circle.style.animation = 'ripple 0.6s linear';
+            circle.style.pointerEvents = 'none';
+
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes ripple {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            const existingRipple = btn.querySelector('.ripple-effect');
+            if (existingRipple) {
+                existingRipple.remove();
+            }
+
+            circle.classList.add('ripple-effect');
+            btn.appendChild(circle);
+        }
+
+        // Add Floating Background Particles
+        const app = document.getElementById('app');
+        for (let i = 0; i < 8; i++) {
+            const size = Math.random() * 60 + 20;
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.top = Math.random() * 100 + '%';
+
+            // Animation
+            const duration = Math.random() * 10 + 10;
+            p.style.animation = `float ${duration}s ease-in-out infinite`;
+            p.style.animationDelay = (Math.random() * 5) + 's';
+            app.appendChild(p);
+        }
+
+        // Particle animation keyframes
+        const pStyle = document.createElement('style');
+        pStyle.innerHTML = `
+            @keyframes float {
+                0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+                50% { transform: translateY(-30px) rotate(10deg); opacity: 0.3; }
+                100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+            }
+        `;
+        document.head.appendChild(pStyle);
+    </script>
+</body>
+
+</html>
