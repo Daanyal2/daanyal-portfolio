@@ -56,6 +56,34 @@
     transition: transform 0.5s;
 }
 
+.learn-more {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff004f;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.learn-more i {
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+    color: inherit !important;
+    transition: transform 0.3s ease !important;
+}
+
+.service-card:hover .learn-more {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 0, 79, 0.4);
+}
+
+.service-card:hover .learn-more i {
+    transform: translateX(5px);
+}
+
 /* Responsive adjustments for services */
 @media only screen and (max-width: 600px) {
     #services {

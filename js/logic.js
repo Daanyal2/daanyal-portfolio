@@ -1,5 +1,6 @@
 /*-------------------js-----------------------*/
 
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -20,7 +21,7 @@ var menuToggle = document.getElementById("menu-toggle");
 function toggleMenu() {
     menuToggle.classList.toggle("open");
     if (sidemenu.style.right === "0px") {
-        sidemenu.style.right = "-200px";
+        sidemenu.style.right = "-250px";
     } else {
         sidemenu.style.right = "0px";
     }
@@ -28,7 +29,7 @@ function toggleMenu() {
 
 // Ensure closemenu works for back-compatibility if needed or remove
 function closemenu() {
-    sidemenu.style.right = "-200px";
+    sidemenu.style.right = "-250px";
     menuToggle.classList.remove("open");
 }
 
@@ -69,7 +70,7 @@ const revealObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("active");
             // Optional: unobserve if you only want it to happen once
-            revealObserver.unobserve(entry.target); 
+            revealObserver.unobserve(entry.target);
         }
     });
 }, {
