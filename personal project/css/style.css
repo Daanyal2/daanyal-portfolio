@@ -20,11 +20,13 @@ h6,
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background: #080808;
     color: #fff;
+    overflow-x: hidden;
 }
 
 #header {
@@ -172,7 +174,7 @@ nav ul li a:hover::after {
     cursor: pointer;
     z-index: 100001;
     /* Highest priority */
-    position: fixed;
+    position: absolute;
     top: 35px;
     right: 35px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -221,12 +223,12 @@ nav ul li a:hover::after {
 
     body .container {
         padding: 10px 20px !important;
-        padding-right: 30px !important;
     }
 
     .header-text {
         margin-top: 360px;
         font-size: 14px;
+        text-align: center;
     }
 
     .header-text h1 {

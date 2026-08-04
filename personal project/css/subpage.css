@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -24,6 +29,7 @@ body {
     margin: 0;
     line-height: 1.6;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Layout */
