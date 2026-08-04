@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack App Projects | Muhammad Daanyal</title>
+    <meta name="description"
+        content="Showcase of Full-Stack Web Applications developed by Muhammad Daanyal, featuring modern frontend frameworks and robust backend logic.">
+    <meta name="keywords" content="Full-Stack, Web Apps, React, Node.js, Muhammad Daanyal, Portfolio">
+    <meta name="author" content="Muhammad Daanyal">
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --secondary-text: #ababab;
+            --accent-color: #ff004f;
+            --card-bg: #262626;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Centering and Max Width for Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 3em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: var(--text-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p,
+        ul {
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* --- Live Demo Button --- */
+        .live-link-btn {
+            display: inline-block;
+            margin: 10px 0 30px;
+            padding: 12px 30px;
+            background: #2a7cff;
+            /* A different, strong accent color for "Live" */
+            color: var(--text-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(42, 124, 255, 0.4);
+            font-weight: 700;
+        }
+
+        .live-link-btn:hover {
+            background: #1e62cc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(42, 124, 255, 0.6);
+        }
+
+        .live-link-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(42, 124, 255, 0.3);
+        }
+
+        /* --- Back Button Style (Retaining original accent color) --- */
+        .back-btn {
+            display: inline-block;
+            margin: 10px 10px 30px 0;
+            padding: 10px 25px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 0, 79, 0.4);
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: #e60042;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 0, 79, 0.6);
+        }
+
+        /* --- Media Placeholders --- */
+        .media-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .media-section h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .media-placeholder {
+            border-radius: 8px;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1em;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ensures actual media takes up the full space when inserted */
+        .media-placeholder img,
+        .media-placeholder video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* --- Developer Photo Placeholder --- */
+        .dev-photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Circular image */
+            margin: 20px auto 10px;
+            border: 4px solid var(--accent-color);
+            background-color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: var(--text-color);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .dev-photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .back-btn,
+            .live-link-btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .media-placeholder {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- NAVIGATION BUTTONS -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <button class="back-btn" onclick="history.back()">← Back to Projects</button>
+            <a href="https://malaika-alvi-psychologist.vercel.app/" target="_blank" class="live-link-btn">
+                <span style="margin-right: 8px;">🚀</span>View Live Website
+            </a>
+        </div>
+
+        <!-- MAIN PAGE CONTENT -->
+        <h1 style="margin-top: 10px;">Full-Stack Web App Projects</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">
+            End-to-end solutions combining robust backends with interactive data-driven frontends.
+        </p>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 1. MAIN SCREENSHOT / HERO IMAGE -->
+        <!-- ------------------------------------------------------------------ -->
+        <div class="media-section">
+            <h2>Project Visual: Excel Data Dashboard & Analytics</h2>
+            <div class="media-placeholder"
+                style="min-height: 350px; background: url('images/full stack.png') center/cover no-repeat; border: none;">
+                <!-- Full-Stack Project Visual -->
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 2. PROJECT DETAILS SECTION -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2>The Challenge & Solution</h2>
+        <p>
+            The challenge was to transform static, complex Excel datasets into an interactive, web-accessible dashboard.
+            I built a custom solution that allows users to upload files, process data in real-time, and visualize key
+            performance indicators (KPIs) through dynamic charts.
+        </p>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 3. SYSTEM ARCHITECTURE -->
+        <!-- ------------------------------------------------------------------ -->
+        <div class="media-section">
+            <h2>Architecture View: System & Data Flow</h2>
+            <p>
+                The application follows a Node.js/Express backend architecture, with a Firebase real-time
+                database for sync. The frontend is built as a Single Page Application (SPA) leveraging D3.js or
+                Chart.js for high-performance data rendering.
+            </p>
+            <div class="media-placeholder"
+                style="min-height: 400px; background: url('images/webpro.JPG') center/cover no-repeat;">
+                <!-- Full-Stack Architecture Visual -->
+            </div>
+        </div>
+
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 4. TECHNICAL STACK / FEATURES -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2>Technical Breakdown</h2>
+        <p>
+            This section details the primary technologies used across the application's stack.
+        </p>
+
+        <h3>Front-End Technology (Client)</h3>
+        <ul>
+            <li>Framework/Library: Vanilla JavaScript / modern SPA patterns</li>
+            <li>Data Visualization: Chart.js & D3.js</li>
+            <li>Key Features: Real-time data filtration, interactive legends, and CSV/Excel export.</li>
+        </ul>
+
+        <h3>Back-End & Database (Server)</h3>
+        <ul>
+            <li>Language/Runtime: Node.js & Express</li>
+            <li>Database: Firebase Firestore & Real-time Database</li>
+            <li>Deployment/Hosting: Vercel & Firebase Hosting</li>
+        </ul>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 5. AUTHOR PHOTO (Customized) -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2 style="text-align: center;">Developed By</h2>
+        <div class="dev-photo-placeholder">
+            <img src="images/IMG_1344.JPG" alt="Developer Profile Photo">
+        </div>
+        <p style="text-align: center; font-size: 1.2em; color: var(--text-color);">Muhammad Daanyal</p>
+
+        <div style="height: 50px;"></div> <!-- Spacer -->
+
+    </div>
+</body>
+
+</html>

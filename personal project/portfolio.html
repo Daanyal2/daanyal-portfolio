@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Vuhz4mcajF4zVa5JbB3D0NeO4xK1HuQAD3EVK4uh6co" />
+    <title>Muhammad Daanyal | Creative Design & Development Portfolio</title>
+    <meta name="description"
+        content="Official portfolio of Muhammad Daanyal. Featuring high-end 3D architectural models, full-stack web applications, mobile development, and professional brand design.">
+    <meta name="keywords"
+        content="Muhammad Daanyal, Portfolio, Web Developer, Graphic Designer, Video Editor, Full-Stack, UI/UX Design, Blender 3D, Mobile Apps">
+    <meta name="author" content="Muhammad Daanyal">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daanyal-portfolio.com/portfolio.html">
+    <meta property="og:title" content="Muhammad Daanyal | Creative Design & Development Portfolio">
+    <meta property="og:description"
+        content="Explore a collection of professional projects spanning Web, Mobile, Graphics, and 3D Design by Muhammad Daanyal.">
+    <meta property="og:image" content="images/web.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://daanyal-portfolio.com/portfolio.html">
+    <meta property="twitter:title" content="Muhammad Daanyal | Creative Design & Development Portfolio">
+    <meta property="twitter:description"
+        content="Explore a collection of professional projects spanning Web, Mobile, Graphics, and 3D Design by Muhammad Daanyal.">
+    <meta property="twitter:image" content="images/web.png">
+
+    <!-- Structured Data (JSON-LD) - CreativeWorkSeries -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWorkSeries",
+      "name": "Muhammad Daanyal's Professional Portfolio",
+      "author": {
+        "@type": "Person",
+        "name": "Muhammad Daanyal"
+      },
+      "description": "A comprehensive showcase of professional works in Web Development, UI/UX Design, and 3D Visualization.",
+      "url": "https://daanyal-portfolio.com/portfolio.html"
+    }
+    </script>
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/about me.css?v=3">
+    <link rel="stylesheet" href="css/services.css?v=3">
+    <link rel="stylesheet" href="css/portfolio.css?v=3">
+    <link rel="stylesheet" href="css/contact.css?v=3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <!-------HOME-------->
+
+    <div id="header">
+        <video autoplay loop muted id="background-video" poster="images/video.mp4">
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-icon" id="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <div class="header-text">
+                <p>Designer. Developer. Creator.</p>
+                <h1>Asalam-0-Alaikum<br>I'm <span>Muhammad Daanyal</span><br>I design interfaces & build modern apps.
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-------About Me-------->
+
+    <div id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="row">
+                    <div class="about-col-1 reveal reveal-left">
+                        <div class="img-box">
+                            <img src="images/IMG_1344.JPG">
+                        </div>
+                    </div>
+                    <div class="about-col-2 reveal reveal-right">
+                        <h1 class="sub-title"><span>About</span> Me</h1>
+                        <p class="about-text">Hey there! I’m <span>Muhammad Daanyal</span> — a creative mind blending
+                            <b>Design</b>, <b>Code</b>,
+                            <b>Visuals</b>, and <b>Innovation</b>.
+                            <br><br>
+                            From eye-catching graphics in <b>Illustrator</b>, to sleek Android apps in
+                            <b>Java/Kotlin</b>,
+                            dynamic websites using <b>HTML/CSS/JS</b>, and engaging <b>Video Edits</b> — I do it all.
+                            <br><br>
+                            I bring ideas to life with clean design, smooth user experiences, and modern code. Whether
+                            it's
+                            building apps, crafting brands, editing videos, or launching websites — I love turning
+                            concepts
+                            into powerful digital products.
+                            <br><br>
+                            <span>Let’s create something that not only works — but wows.</span>
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <!-------Skills-------->
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX Design</span><br> Crafting intuitive and beautiful user interfaces for
+                                    web &
+                                    mobile</li>
+                                <li><span>Mobile App Development</span><br>Building Android/IOS Apps</li>
+                                <li><span>Web Development</span><br>Developing modern, responsive websites that look
+                                    great
+                                    on any device</li>
+                                <li><span>Graphic Design</span><br>Designing stunning logos, icons, and visuals using
+                                    Adobe
+                                    Illustrator</li>
+                            </ul>
+                        </div>
+                        <!-------Experience-------->
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Android Projects</span><br>Developed Android apps using Java & Kotlin with
+                                    smooth
+                                    UI/UX.</li>
+                                <li><span>Freelance Web Development</span><br>Built responsive websites with HTML, CSS &
+                                    JavaScript.</li>
+                                <li><span>Graphic Design</span><br>Created designs and illustrations using Adobe
+                                    Illustrator
+                                    and Blender.</li>
+                                <li><span>Video Editing</span><br>Edited social media and promo videos using Premiere
+                                    Pro &
+                                    CapCut.</li>
+                            </ul>
+                        </div>
+                        <!-------Education-------->
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2018</span><br>Matric from Fazaia Degree College, ARF Kamra</li>
+                                <li><span>2021</span><br>FSC ICS from Punjab College Of Excellence In Commerce, Kamra
+                                    Cant
+                                </li>
+                                <li><span>2025</span><br>BS CS from Virtual University</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-bg-circle"></div>
+        <div class="about-bg-circle2"></div>
+    </div>
+
+    <!-------Services-------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title reveal reveal-up">My <span>Services</span></h1>
+            <div class="services-list reveal reveal-stagger">
+                <a href="UIUX.html" class="service-card">
+                    <div>
+                        <i class="fa-solid fa-palette"></i>
+                        <h2>UI/UX Design</h2>
+                    </div>
+                </a>
+
+                <a href="MAD.html" class="service-card">
+                    <div>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h2>Mobile App Development</h2>
+                    </div>
+                </a>
+
+                <a href="Web.html" class="service-card">
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <h2> Website Development</h2>
+                    </div>
+                </a>
+                <a href="Graphic.html" class="service-card">
+                    <div>
+                        <i class="fa-solid fa-image"></i>
+                        <h2>Graphic Designing</h2>
+                    </div>
+                </a>
+                <a href="videoEditing.html" class="service-card">
+                    <div>
+                        <i class="fa-solid fa-photo-film"></i>
+                        <h2>Video Editing</h2>
+                    </div>
+                </a>
+                <a href="webapps.html" class="service-card">
+                    <div>
+                        <i class="fa-solid fa-house-laptop"></i>
+                        <h2>Full-Stack Web Apps</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="about-bg-circle"
+            style="top: 20%; left: -10%; background: radial-gradient(circle, rgba(255, 0, 81, 0.1) 0%, transparent 70%);">
+        </div>
+    </div>
+
+    <!-------Portfolio-------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title reveal reveal-up">My <span>Work</span></h1>
+            <div class="work-list">
+                <!-- 1. Websites -->
+                <div class="work-container reveal reveal-spin">
+                    <h3 class="work-title">Websites</h3>
+                    <div class="work">
+                        <img src="images/web.png">
+                        <div class="layer">
+                            <h3>Websites</h3>
+                            <p>Built responsive and modern websites for clients and personal projects using HTML, CSS,
+                                JavaScript, and backend integration.</p>
+                            <a href="webpj.html" class="click-hint">Click to Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. UI/UX -->
+                <div class="work-container reveal reveal-spin">
+                    <h3 class="work-title">UI/UX Projects</h3>
+                    <div class="work">
+                        <img src="images/UIUX.png">
+                        <div class="layer">
+                            <h3>UI/UX Projects</h3>
+                            <p>Designed user-friendly interfaces and wireframes for mobile and web apps using Figma and
+                                Illustrator.</p>
+                            <a href="uiuxpj.html" class="click-hint">Click to Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Mobile Apps -->
+                <div class="work-container reveal reveal-spin">
+                    <h3 class="work-title">Mobile Apps</h3>
+                    <div class="work">
+                        <img src="images/mobile apps.png">
+                        <div class="layer">
+                            <h3>Mobile Apps</h3>
+                            <p>Developed functional and smooth Android apps using Java & Kotlin, focusing on real-world
+                                usability and clean UI/UX.</p>
+                            <a href="MADpj.html" class="click-hint">Click to Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Graphic Design -->
+                <div class="work-container reveal reveal-spin">
+                    <h3 class="work-title">Graphic Design</h3>
+                    <div class="work">
+                        <img src="images/graphics.png">
+                        <div class="layer">
+                            <h3>Graphic Design</h3>
+                            <p>Created logos, posters, and brand kits using Adobe Illustrator, along with 3D models and
+                                visuals in Blender.</p>
+                            <a href="GDpj.html" class="click-hint">Click to Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Video Editing -->
+                <div class="work-container reveal reveal-spin">
+                    <h3 class="work-title">Video Editing</h3>
+                    <div class="work">
+                        <img src="images/editing.png">
+                        <div class="layer">
+                            <h3>Video Editing</h3>
+                            <p>Edited short videos, reels, and promos using Premiere Pro and CapCut for personal and
+                                client-based content.</p>
+                            <a href="VEpj.html" class="click-hint">Click to Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Full-Stack -->
+                <div class="work-container reveal reveal-spin">
+                    <h3 class="work-title">Full-Stack Web Apps</h3>
+                    <div class="work">
+                        <img src="images/full stack.png">
+                        <div class="layer">
+                            <h3>Full-Stack Web Apps</h3>
+                            <p>Developed complete web applications with both frontend and backend functionality,
+                                database integration, and auth.</p>
+                            <a href="Webapppj.html" class="click-hint">Click to Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="about-bg-circle2"
+            style="bottom: 10%; right: -5%; background: radial-gradient(circle, rgba(0, 79, 255, 0.05) 0%, transparent 70%);">
+        </div>
+    </div>
+
+    <!----Contact----->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left reveal reveal-left">
+                    <h1 class="sub-title"><span>Contact</span> Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>muhammaddaanyal22@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+92 334 5616972</p>
+                    <div class="social-icons">
+                        <!----URL----->
+                        <a href="https://www.instagram.com/islamic_edit_s?igsh=MXhqZTFjc3V2N3E0cg=="><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@islamic_edit_s_?is_from_webapp=1&sender_device=pc"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/muhammad-daanyal-5bb6a1206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Daanyal2"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/resume.docx" download class="btn btn2">Download CV</a>
+                </div>
+
+                <div class="contact-right reveal reveal-right">
+                    <form id="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Muhammad Daanyal – Portfolio Website. <i class="fa-solid fa-heart-pulse"></i> All rights reserved.
+            </p>
+        </div>
+    </div>
+
+
+    <script src="js/logic.js"></script>
+    <script defer src="https://kit.fontawesome.com/009360a429.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

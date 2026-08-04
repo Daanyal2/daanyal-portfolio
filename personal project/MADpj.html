@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Development | Muhammad Daanyal</title>
+    <meta name="description"
+        content="Showcase of functional and high-performance Android applications developed by Muhammad Daanyal, focusing on clean UI and smooth user experience.">
+    <meta name="keywords" content="Mobile Apps, Android Development, Kotlin, Java, UI/UX, Muhammad Daanyal, Portfolio">
+    <meta name="author" content="Muhammad Daanyal">
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --secondary-text: #ababab;
+            --accent-color: #ff004f;
+            --card-bg: #262626;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Centering and Max Width for Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 3em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p,
+        ul {
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* --- Back Button Style --- */
+        .back-btn {
+            display: inline-block;
+            margin: 10px 0 30px;
+            padding: 10px 25px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 0, 79, 0.4);
+            /* Soft shadow for lift */
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: #e60042;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 0, 79, 0.6);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(255, 0, 79, 0.3);
+        }
+
+        /* --- Media Placeholders --- */
+        .media-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .media-section h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .media-placeholder {
+            border-radius: 8px;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1em;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ensures actual media takes up the full space when inserted */
+        .media-placeholder img,
+        .media-placeholder video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* --- Developer Photo Placeholder --- */
+        .dev-photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Circular image */
+            margin: 20px auto 10px;
+            border: 4px solid var(--accent-color);
+            background-color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: var(--text-color);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .dev-photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .back-btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .media-placeholder {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- BACK BUTTON: Uses JavaScript to navigate back to the previous page in history -->
+        <button class="back-btn" onclick="history.back()">← Back to Projects</button>
+
+        <!-- MAIN PAGE CONTENT -->
+        <h1 style="margin-top: 10px;">Mobile App Projects</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">
+            Native and cross-platform mobile applications designed for performance, usability, and seamless user
+            experiences.
+        </p>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 1. MAIN SCREENSHOT / DEVICE MOCKUP -->
+        <!-- ------------------------------------------------------------------ -->
+        <div class="media-section">
+            <h2>App Visual: FocusFlow Productivity Companion</h2>
+            <div class="media-placeholder"
+                style="min-height: 350px; background: url('images/mobile apps.png') center/cover no-repeat; border: none;">
+                <!-- Main Mobile App Visual -->
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 2. PROJECT DETAILS SECTION -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2>Project Goal & Features</h2>
+        <p>
+            Developed FocusFlow, a productivity application aimed at helping users manage tasks and time
+            effectively.
+            The app features a clean, Material Design-based UI, offline support, and real-time notifications for task
+            reminders.
+        </p>
+        <p>
+            Key Features:
+            - Custom Pomodoro timer integration.
+            - Hierarchical task management with subtasks.
+            - Interactive progress charts and daily habit tracking.
+        </p>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 3. APP WALKTHROUGH VIDEO / GIF -->
+        <!-- ------------------------------------------------------------------ -->
+        <div class="media-section">
+            <h2>Showcase: Interactive UI Demonstration</h2>
+            <div class="media-placeholder"
+                style="min-height: 400px; background: url('images/mobile.png') center/cover no-repeat;">
+                <!-- Animated UI Interaction Visual -->
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 4. TECHNICAL STACK / FRAMEWORK -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2>Mobile Framework & Technology</h2>
+        <p>
+            Built using modern native development practices to ensure high performance and deep OS integration.
+        </p>
+        <ul>
+            <li>Language/Framework: Kotlin / Android SDK</li>
+            <li>Architecture: MVVM (Model-View-ViewModel)</li>
+            <li>Local Data: Room Persistent Library (SQLite)</li>
+        </ul>
+
+        <!-- ------------------------------------------------------------------ -->
+        <!-- 5. AUTHOR PHOTO (Customized) -->
+        <!-- ------------------------------------------------------------------ -->
+        <h2 style="text-align: center;">Developed By</h2>
+        <div class="dev-photo-placeholder">
+            <img src="images/IMG_1344.JPG" alt="Developer Profile Photo">
+        </div>
+        <p style="text-align: center; font-size: 1.2em; color: var(--text-color);">Muhammad Daanyal</p>
+
+        <div style="height: 50px;"></div> <!-- Spacer -->
+
+    </div>
+</body>
+
+</html>
